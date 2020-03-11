@@ -1,0 +1,256 @@
+/* Here are example using scss */
+@font-face {
+  font-family: "SevenOneEight Black";
+  src: url("../assets/fonts/SevenOneEight-Black.ttf");
+}
+@font-face {
+  font-family: "SevenOneEight Book";
+  src: url("../assets/fonts/SevenOneEight-Book.ttf");
+}
+@font-face {
+  font-family: "SevenOneEight ExtraBold";
+  src: url("../assets/fonts/SevenOneEight-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "SevenOneEight Light";
+  src: url("../assets/fonts/SevenOneEight-Light.ttf");
+}
+@font-face {
+  font-family: "SevenOneEight Medium";
+  src: url("../assets/fonts/SevenOneEight-Medium.ttf");
+}
+
+$color-red: #D92E22;
+$color-black: #333333;
+$color-beige: #BD9C6A;
+$color-grey:#EFEFEF;
+
+$container-width-md: 85%;
+$container-width-xs: 90%;
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $color-grey;
+  color: $color-black;
+  font-size: 1.6rem;
+  text-align: center;
+  font-family: 'SevenOneEight Light';
+}
+
+
+h1 { color: $color-red; margin-bottom: 0; font-family: 'SevenOneEight Book';}
+h2 { color: $color-black; margin: 0; font-family: 'SevenOneEight Light';}
+
+hr{
+  height: 4px;
+  border: 0;
+  margin-top: 15px;
+  color: $color-black;
+  background-color: black;
+}
+
+header{
+  hr {
+    width:125px;
+  }
+}
+
+.container{
+  width: $container-width-md;
+}
+
+.container-filters{
+  margin: auto;
+  padding: 2rem;
+
+}
+.container-cards{
+  margin: auto;
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  article{
+    min-width:369px;
+  }
+}
+
+.container-infos{
+  margin: auto;
+  .promotion{
+    padding-bottom: 3rem;
+    p{
+      margin: 0;
+      padding-bottom: 0.5rem;
+    }
+    strong{
+      font-family: 'SevenOneEight ExtraBold';
+    }
+    hr {
+      width:90px;
+      margin-top: 10px;
+    }
+  }
+
+  .members{
+    background-color: $color-red;
+    color:#fff;
+    padding:2rem;
+    p{
+      margin: 0;
+      padding-top: 0.5rem;
+    }
+    strong{
+      font-family: 'SevenOneEight Light';
+    }
+  }
+
+  .login{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 4rem;
+    padding-top:2rem;
+    ul{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin: auto;
+      width:100%;
+      padding: 0 30px;
+      li:nth-child(2){
+        margin-right: 15px;
+        margin-left: 15px;
+      }
+      li{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        span:first-child{
+          font-size: 4.5em;
+          color:$color-red;
+          margin-right: 10px;
+          top: 5px;
+          position: relative;
+          font-family: 'SevenOneEight Black';
+        }
+        span{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          font-size: 1em;
+          p{
+            margin:0;
+            text-align: left;
+          }
+          strong{
+            color:$color-red;
+            text-align: left;
+            font-family: 'SevenOneEight Black';
+          }
+        }
+      }
+    }
+    button{
+      background-color: $color-red;
+      width: max-content;
+      margin: auto;
+      color: #fff;
+      border: 0;
+      padding: 15px 100px 15px 100px;
+      margin-top: 3rem;
+    }
+  }
+
+}
+
+
+footer { 
+  position: sticky;
+  bottom:0;
+  background-color: $color-black;
+  margin:auto;
+  padding: 2rem;
+  p{
+    color:#fff;
+    margin: 0;
+  }
+  hr {
+    width:220px;
+    height: 4px;
+    border: 0;
+    margin-top: 10px;
+    background-color: $color-red;
+  }
+}
+
+
+// responsive design
+
+@media screen and (max-width: 1024px) {
+  .container{
+    width: $container-width-xs;
+  }
+  .container-infos{
+    .login{
+      ul{
+        display: flex;
+        flex-direction: column;
+        li{
+          width:100%;
+          justify-content: flex-start;
+          span:first-child{
+            top: 6px;
+          }
+          span{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 1em;
+            p{
+              margin:0;
+              text-align: left;
+            }
+            strong{
+              color:$color-red;
+              text-align: left;
+            }
+          }
+        }
+        li:nth-child(2){
+          margin-right: 0;
+          margin-left: 0;
+        }
+        li:nth-child(2)::before{
+          height:25px;
+          width:1px;
+          background: $color-black;
+          position: relative;
+          left:23px;
+          top:-14px;
+          content:"";
+        }
+        li:nth-child(2)::after{
+          height:25px;
+          width:1px;
+          background: $color-black;
+          position: relative;
+          left: -275px;
+          top: 72px;
+          content:"";
+        }
+      }
+    }
+  }
+}
