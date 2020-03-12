@@ -38,13 +38,22 @@ module.exports = {
         ]
       },
       {
+        test: /\.(ttf|eot|woff|woff2)$/,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "fonts/[name].[ext]",
+          },
+        },
+      },
+      {
         test: /\.(png|svg|jpe?g|gif)$/,
         use: [
           {
             loader: "file-loader", // This will resolves import/require() on a file into a url and emits the file into the output directory.
             options: {
               name: "[name].[ext]",
-              outputPath: "assets/"
+              outputPath: "assets/images/"
             }
           },
         ]

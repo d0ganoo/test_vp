@@ -189,4 +189,43 @@ export const destinations = [
         ],
         "link": ""
     }
+    ,
+    {   // 11
+        "country": "Vietnam",
+        "place": "De Hanoï à Hoi An",
+        "label": "Entre Culture et Plages",
+        "rating": "4*",
+        "upto": "Dès 779€",
+        "redirect_label": "VERS LE VIETNAM — DE HANOÏ À HOI AN",
+        "tags":[
+            {
+                "classname": "premium",
+                "label": "Circuit"
+            },
+            {
+                "classname": "option",
+                "label": "Privatif"
+            }
+        ],
+        "link": ""
+    },
+    {   // 12
+        "country": "Vietnam",
+        "place": "De Hanoï à Hoi An",
+        "label": "Entre Culture et Plages",
+        "rating": "4*",
+        "upto": "Dès 779€",
+        "redirect_label": "VERS LE VIETNAM — DE HANOÏ À HOI AN",
+        "tags":[
+            {
+                "classname": "premium",
+                "label": "Circuit"
+            },
+            {
+                "classname": "option",
+                "label": "Privatif"
+            }
+        ],
+        "link": ""
+    }
 ];

@@ -4,28 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
     <title>Emirates | The list</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header container">
         <h1>DÉCOUVREZ LES OFFRES DU MOMENT</h1>
         <h2>VOL + HÔTEL JUSQU'À -70%</h2>
         <hr>
     </header>
 
-    <main>
-      <section class="container-filters container">
+    <main class="container">
+      <section class="container-filters">
+        <i class="material-icons">
+          tune
+          </i>
           <select name="destinations" id="destinations-select">
-              <option value="">DESTINATIONS</option>
+              <option data-content=""value="">DESTINATIONS</option>
           </select>
       </section>
   
-      <section class="container-cards container">
+      <section class="container-cards">
         
       </section>
 
-      <section class="container-infos container">
+      <section class="container-infos">
         <div class="promotion">
             <p>COMMENT BÉNÉFICIER DE L'OFFRE ?</p>
             <strong>150€ DE RÉDUCTION* DÈS 1000€ D'ACHAT</strong>
@@ -71,4 +76,5 @@
         <hr>
     </footer>
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 </html>
